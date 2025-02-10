@@ -27,7 +27,7 @@ def criar_ou_conectar_indice():
 # Função para gerar embeddings usando o Ollama
 def gerar_embeddings_ollama(textos):
     try:
-        # Aqui, se você estiver chamando o Ollama via subprocess, imprime a resposta
+        # Aqui, se estiver chamando o Ollama via subprocess, imprime a resposta
         result = subprocess.run(['ollama', 'embed', '--text', '\n'.join(textos)], capture_output=True, text=True)
 
         print(f"Resposta do Ollama: {result.stdout}")  # Imprime a resposta para debug
